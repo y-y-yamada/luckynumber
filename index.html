@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lucky Number</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PWA設定 -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="./icons/icon-180.png">
+    <meta name="theme-color" content="#536DFE">
+
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header>
+            <p class="sub-title">TODAY'S LUCKY NUMBER</p>
+            <h1>Lucky Number</h1>
+            <p class="description">
+                今日のあなたのラッキーナンバーは？
+            </p>
+        </header>
+
+        <section class="number-area">
+
+            <p class="result-label">YOUR NUMBER</p>
+
+            <div id="number">--</div>
+
+            <p id="message">
+                ボタンを押して数字を占おう！
+            </p>
+
+        </section>
+
+        <button id="drawButton">
+            ラッキーナンバーを引く
+        </button>
+
+        <footer>
+            <p>Have a wonderful day!</p>
+        </footer>
+
+    </main>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Service Worker登録 -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register(
+                    './service-worker.js'
+                );
+            });
+        }
+    </script>
+
+</body>
+</html>

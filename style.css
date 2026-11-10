@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+/* 共通設定 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, "Noto Sans JP", sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #536DFE,
+        #9C6BFF
+    );
+
+    color: #333;
+}
+
+/* メインエリア */
+.container {
+    width: 90%;
+    max-width: 420px;
+
+    padding: 40px 25px;
+
+    text-align: center;
+
+    background: #fff;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* タイトル */
+.sub-title {
+    margin: 0;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+
+    color: #536DFE;
+}
+
+h1 {
+    margin: 10px 0;
+
+    font-size: 32px;
+    color: #333;
+}
+
+.description {
+    margin-bottom: 35px;
+
+    font-size: 14px;
+    color: #888;
+}
+
+/* 数字表示エリア */
+.number-area {
+    padding: 30px 10px;
+
+    background: #F3F4FF;
+
+    border-radius: 20px;
+}
+
+.result-label {
+    margin: 0;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+
+    color: #777;
+}
+
+/* ラッキーナンバー */
+#number {
+    margin: 15px 0;
+
+    font-size: 100px;
+    font-weight: bold;
+
+    line-height: 1.2;
+
+    color: #536DFE;
+}
+
+/* メッセージ */
+#message {
+    margin: 10px 0 0;
+
+    font-size: 14px;
+    color: #777;
+}
+
+/* ボタン */
+button {
+    width: 100%;
+
+    margin-top: 30px;
+    padding: 18px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: linear-gradient(
+        90deg,
+        #536DFE,
+        #906BFF
+    );
+
+    color: #fff;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* マウスを乗せたとき */
+button:hover {
+    opacity: 0.85;
+    transform: translateY(-3px);
+}
+
+/* 押したとき */
+button:active {
+    transform: scale(0.97);
+}
+
+/* フッター */
+footer {
+    margin-top: 30px;
+
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* スマートフォン */
+@media (max-width: 480px) {
+
+    .container {
+        padding: 35px 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    #number {
+        font-size: 85px;
+    }
+
+}
